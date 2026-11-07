@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First HTML Page</title>
+    <title>Md Abul HasnaT | Personal Website</title>
     <style>
       * { box-sizing: border-box; }
 
@@ -51,28 +51,91 @@
         background: #1d4ed8;
       }
 
-      .info {
+      .profile {
         margin-top: 30px;
         padding: 18px 20px;
         background: #eff6ff;
-        border-left: 5px solid #3b82f6;
+        border-radius: 12px;
+      }
+
+      .profile h2 {
+        margin: 0 0 16px;
+        font-size: 1.35rem;
+        color: #111827;
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .profile-item {
+        padding: 16px;
+        background: #ffffff;
         border-radius: 8px;
+      }
+
+      .profile-item span {
+        display: block;
+        margin-bottom: 6px;
+        color: #6b7280;
+        font-size: 0.85rem;
+      }
+
+      .profile-item strong {
+        color: #1f2937;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: #2563eb;
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          margin: 32px auto;
+          padding: 26px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .profile-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Hello, World!</h1>
+      <p class="eyebrow">Student Portfolio</p>
+      <h1>Hi, I'm Md Abul Hasnat</h1>
       <p>
-        This is a simple HTML page created in the project folder. You can edit the content
-        here to build your own website or landing page.
+        I am a student in the Computer Science and Engineering (CSE) Department at Southeast
+        University.
       </p>
 
-      <a href="#" class="button">Click Me</a>
+      <a href="#about" class="button">About Me</a>
 
-      <div class="info">
-        <strong>Note:</strong> You can replace this content with your own text, images, and CSS.
-      </div>
+      <section class="profile" id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">My Academic Profile</h2>
+        <div class="profile-grid">
+          <div class="profile-item">
+            <span>University</span>
+            <strong>Southeast University</strong>
+          </div>
+          <div class="profile-item">
+            <span>Department</span>
+            <strong>Computer Science and Engineering (CSE)</strong>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
